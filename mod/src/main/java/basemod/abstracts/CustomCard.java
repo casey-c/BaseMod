@@ -444,10 +444,10 @@ public abstract class CustomCard extends AbstractCard {
 			return;
 		}
 
-		BitmapFont savedFont = FontHelper.cardTitleFont_small;
-		FontHelper.cardTitleFont_small = titleFont;
+		BitmapFont savedFont = FontHelper.cardTitleFont;
+		FontHelper.cardTitleFont = titleFont;
 		SpireSuper.call(sb);
-		FontHelper.cardTitleFont_small = savedFont;
+		FontHelper.cardTitleFont = savedFont;
 	}
 
 	private static BitmapFont generateTitleFont(float size) {
