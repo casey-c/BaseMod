@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.modthespire.patcher.Expectation;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.DeathScreen;
+import com.megacrit.cardcrawl.screens.GameOverScreen;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -18,11 +19,7 @@ import java.util.ArrayList;
 import static basemod.BaseMod.logger;
 
 @SpirePatch(
-        clz = DeathScreen.class,
-        method = "calculateUnlockProgress"
-)
-@SpirePatch(
-        clz = VictoryScreen.class,
+        clz = GameOverScreen.class,
         method = "calculateUnlockProgress"
 )
 public class NoUnlockBar {
